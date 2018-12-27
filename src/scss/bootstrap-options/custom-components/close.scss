@@ -1,0 +1,17 @@
+//
+// Close icons specified customize
+// --------------------------------------------------
+
+
+.close {
+
+  .opacity(.9); 
+
+  &:hover,
+  &:focus {
+
+    .opacity(.6);
+  }
+
+  
+}
