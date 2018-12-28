@@ -11,9 +11,12 @@ class SignupPage extends React.Component {
     this.submit = this.submit.bind(this);
   }
 
+  componentDidMount() {
+    document.title = "Sign Up";
+  } 
+
   submit (data) {
     this.props.signup(data)
-      // .then(() => this.props.history.push("/dashboard"))
       ;
   }
 
@@ -35,9 +38,6 @@ class SignupPage extends React.Component {
 }
 
 SignupPage.propTypes = {
-  // history: PropTypes.shape({
-  //   push: PropTypes.func.isRequired
-  // }).isRequired,
   signup: PropTypes.func.isRequired
 };
 

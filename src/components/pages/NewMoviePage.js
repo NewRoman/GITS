@@ -1,23 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-// import { Link } from "react-router-dom";
 import AddNewMovieForm from "../forms/AddNewMovieForm";
 import { addNewMovie } from "../../actions/movies";
 
 class NewMoviePage extends React.Component {
   constructor(props){
     super(props);
-	this.submit = this.submit.bind(this);
-	
-	
+	  this.submit = this.submit.bind(this);
   }
 
+
+  componentDidMount() {
+    document.title = "Add new movie";
+  } 
+
   submit (data) {
-	data.userEmail = this.props.userEmail;
-    this.props.addNewMovie(data)
+    data.userEmail = this.props.userEmail;
+      this.props.addNewMovie(data)
       .then(() => this.props.history.push("/dashboard"))
-      ;
+        ;
   }
 
   render() {

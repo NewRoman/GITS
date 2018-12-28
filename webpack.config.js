@@ -1,7 +1,7 @@
 // webpack v4
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackMd5Hash = require('webpack-md5-hash');
+// const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 // const StyleLintPlugin = require('stylelint-webpack-plugin');
@@ -18,6 +18,7 @@ module.exports = {
     contentBase: './dist',
     open: true,
     historyApiFallback: true,
+    inline: true
   },
   module: {
     rules: [
@@ -40,7 +41,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
+        test: /\.(gif|png|jpe?g|svg|ico)$/i,
         use: [{
           loader: 'file-loader',
           options: {
@@ -79,7 +80,9 @@ module.exports = {
       inject: false,
       hash: false,
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      favicon: './src/favicon.ico'
+
     }),
     // new WebpackMd5Hash(),
     // new StyleLintPlugin({

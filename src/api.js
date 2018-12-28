@@ -18,7 +18,7 @@ export default {
           return new Promise((resolve, reject) => {
             setTimeout(()=> {
             return resolve(logingUser);
-            }, 500)
+            }, 300)
 
           })
     },
@@ -35,7 +35,7 @@ export default {
       return new Promise((resolve, reject) => {
           setTimeout(()=> {
           return resolve(userToStore);
-          }, 500)
+          }, 300)
       })
 	  // send request to server to store new user
       // axios.post("/api/users", { user }).then(res => res.data.user)
@@ -58,7 +58,7 @@ export default {
       return new Promise((resolve, reject) => {
         setTimeout(()=> {
           return resolve(usersMovies);
-        }, 500)
+        }, 300)
       })
     }
   	,
@@ -92,7 +92,7 @@ export default {
       return new Promise((resolve, reject) => {
         setTimeout(()=> {
           return resolve(newMovie);
-        }, 500)
+        }, 300)
       })
       // axios.post("/api/add/movie", { newMovie }).then(res => res.data.newMovie)
 
@@ -109,7 +109,7 @@ export default {
       return new Promise((resolve, reject) => {
         setTimeout(()=> {
           return resolve([]);
-        }, 500)
+        }, 300)
       })
       // axios.post("/api/clear/movies", { userId }).then(res => res.data.status)
     }

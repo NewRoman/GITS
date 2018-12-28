@@ -11,9 +11,12 @@ class LoginPage extends React.Component {
     this.submit = this.submit.bind(this);
   }
 
+  componentDidMount() {
+    document.title = "Log In";
+  } 
+
   submit (data) {
     this.props.login(data)
-      // .then(() => this.props.history.push("/dashboard"))
       ;
   }
 
@@ -35,9 +38,6 @@ class LoginPage extends React.Component {
 }
 
 LoginPage.propTypes = {
-  // history: PropTypes.shape({
-  //   push: PropTypes.func.isRequired
-  // }).isRequired,
   login: PropTypes.func.isRequired
 };
 

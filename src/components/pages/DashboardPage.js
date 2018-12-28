@@ -9,7 +9,6 @@ import contains from "validator/lib/contains";
 import SearchMoviesInput from "../forms/SearchMoviesInput";
 
 import { fetchMovies, clearList } from "../../actions/movies";
-import { dim } from "ansi-colors";
 
 class DashboardPage extends React.Component {
   constructor(props){
@@ -25,6 +24,7 @@ class DashboardPage extends React.Component {
   }
 
   componentDidMount() {
+    document.title = "Movie's list";
     this.onInit(this.props);
   } 
 
@@ -87,8 +87,6 @@ class DashboardPage extends React.Component {
             )
         }
 
-       
-
         {
           movies.length > 0 && (
             <table className="table table-sm mt-3">
@@ -131,21 +129,6 @@ class DashboardPage extends React.Component {
           )
         }
 
-        {/* <ul className="movies-list">
-          { 
-            movies.map((movie, key)=> {
-              return (
-                <li key={ key } className="movie-item">
-                  {
-                    Object.keys(movie).map((item, key)=>{
-                      return <span key={ key } className={ key }> { movie[item] }</span>
-                    })
-                  }
-                </li>
-              )
-            })
-          }
-         </ul> */}
       </div>
     );
   }

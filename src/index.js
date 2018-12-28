@@ -21,8 +21,7 @@ const store = configureStore();
 if ( !localStorage.getItem('users') ) localStorage.setItem("users", JSON.stringify([]));// all registered user
 if ( !localStorage.getItem('movies') ) localStorage.setItem("movies", JSON.stringify([]));// all movies by each user
 
-// if localStorage contains loged user then store this user into redux store now !!!!it works only home page!!!!
-// @todo fix GET error on other pages
+// if localStorage contains loged user then store this user into redux store 
 if ( localStorage.getItem("user") ) {// get logged user from localStorage
   const user = JSON.parse( localStorage.getItem("user") );
   store.dispatch(userLoggedIn(user));

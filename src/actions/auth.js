@@ -28,16 +28,3 @@ export const signup = data => dispatch =>
     localStorage.setItem('user', JSON.stringify(user));
     dispatch(userLoggedIn(user));
   });
-
-export const confirm = token => dispatch =>
-  api.user.confirm(token).then(user => {
-    localStorage.bookwormJWT = user.token;
-    dispatch(userLoggedIn(user));
-  });
-
-export const resetPasswordRequest = ({ email }) => () =>
-  api.user.resetPasswordRequest(email);
-
-export const validateToken = token => () => api.user.validateToken(token);
-
-export const resetPassword = data => () => api.user.resetPassword(data);

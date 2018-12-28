@@ -10,7 +10,8 @@ import NewMoviePage from "./components/pages/NewMoviePage";
 import UserRoute from "./components/routes/UserRoute";
 import GuestRoute from "./components/routes/GuestRoute";
 import TopNavBar from "./components/navigation/TopNavBar";
-  
+import './favicon.ico';
+
 const App = ({ location, isAuthenticated }) => (
   <div className="container">
     
