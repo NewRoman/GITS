@@ -4,6 +4,6 @@ SPA for creating lists of favorite movies(React+ReactRouter+Redux+Bootstrap4+SCS
 
 
 ## For start production project:
-- yarn or npm install
-- node server.js
-- go to http://localhost:8888/login  in your browser
+- type in terminal:$ yarn or npm install
+- start server.js, type in terminal:$ node server.js
+- open the browser and go to http://localhost:8888/login
